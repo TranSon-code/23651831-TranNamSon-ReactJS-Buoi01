@@ -2,7 +2,7 @@ import "./ProductList.css";
 import productImg from "../../assets/product_img.webp"; 
 
 function ProductList() {
-  const products = [1, 2, 3, 4, 5, 6, 7, 8]; // Danh sách 8 món
+  const products = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
     <div className="container">
