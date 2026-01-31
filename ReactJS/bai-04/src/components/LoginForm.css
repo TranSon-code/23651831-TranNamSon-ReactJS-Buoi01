@@ -1,43 +1,79 @@
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Hiệu ứng Fade in / fade out nhẹ */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+
+.login-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .login-form {
   background: white;
-  padding: 30px;
+  padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 320px;
+  max-width: 350px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Nút đóng (x) theo yêu cầu */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
 }
 
 .login-form h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #1a2b4b;
+  font-size: 24px;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: 600;
-  color: #333;
 }
 
 .form-group input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
+/* Input có focus effect */
 .form-group input:focus {
   outline: none;
   border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
 }
 
+/* Button full width */
 .login-button {
   width: 100%;
   padding: 12px;
@@ -45,8 +81,11 @@
   color: white;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
   font-weight: bold;
-  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
 }
